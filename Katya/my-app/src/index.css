@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(26, 25, 25);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 50px auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 35px;
+  cursor: pointer;
+  color: #414c4b;
+}
+
+header ul.nav {
+  align-items: center;
+}
+
+header ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+header ul.nav li:hover {
+  opacity: 0.5;
+}
+
+.search {
+  width: 200%;
+  padding: 8px;
+  border-radius: 3px;
+  border-color: darkgrey;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+header .presentation {
+  margin: 100px 0;
+  background: url(../public/bookswhite.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+header .presentation::after {
+  content: 'Лучшие книги для Вас';
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  width: 309px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #009688;
+  ;
+}
+
+header .presentation::before {
+  content: 'по низким ценам';
+  position: absolute;
+  top: 115px;
+  left: 50px;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #009688;
+  ;
+}
+
+.subscribe{
+  background: #F4EEFD;
+  }
+
+fieldset{
+  padding: 50px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.inputs{
+  display: flex;
+}
+
+.inputMail , .inputSubmit{
+padding: 10px;
+/* border-radius: 5px; */
+}
+
+.inputSubmit{
+  background: #414c4b;
+  color: #F4EEFD;
+  cursor: pointer;
+}
+
+.footer {
+  justify-content: space-between;
+  margin-top: 100px;
+  display: flex;
+}
