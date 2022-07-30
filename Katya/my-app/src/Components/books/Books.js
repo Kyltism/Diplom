@@ -36,18 +36,18 @@ fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
 
             container1.append(div1);
 
-            
+            let bookCard = [];
+            bookCard.push(cont);
+            console.log(bookCard)
 
         })
 
     });
 
-    let cont = document.getElementsByClassName('containerCards');
+let cont = document.getElementsByClassName('containerCards');
 
-    // console.log(Books);
-    let bookCard = [];
-    bookCard.push(cont);
-    console.log(bookCard)
+// console.log(Books);
+
 
 let Books = () => {
 
@@ -55,9 +55,9 @@ let Books = () => {
 
 
     return (
-        
-            <div id="BookCards"> </div>
-        
+
+        <div id="BookCards"> </div>
+
     )
 }
 

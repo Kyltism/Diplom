@@ -20,8 +20,11 @@ function App() {
         <Header />
         
         <Books />
+        <TodoApp></TodoApp>
         <Subscribe />
+        
         <Footer />
+        
       </div>
 
       <BrowserRouter>
@@ -33,7 +36,7 @@ function App() {
         </Routes>
 
       </BrowserRouter>
-      <TodoApp></TodoApp>
+      
     </>
   );
 }
