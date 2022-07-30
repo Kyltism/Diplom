@@ -1,6 +1,6 @@
 import './Books.css';
 
-let bookCard = [];
+// let bookCard = [];
 fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
     .then((Response) => {
         return Response.json()
@@ -36,11 +36,18 @@ fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
 
             container1.append(div1);
 
+            
+
         })
 
     });
 
+    let cont = document.getElementsByClassName('containerCards');
+
     // console.log(Books);
+    let bookCard = [];
+    bookCard.push(cont);
+    console.log(bookCard)
 
 let Books = () => {
 
