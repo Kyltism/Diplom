@@ -1,4 +1,5 @@
 import bookCard from '../books/Books';
+import React from 'react';
 
 class TodoApp extends React.Component {
     constructor() {
@@ -22,16 +23,16 @@ class TodoApp extends React.Component {
         this.setPrevAndNextBtnClass = this.setPrevAndNextBtnClass.bind(this);
     }
     componentDidUpdate() {
-        $("ul li.active").removeClass('active');
-        $('ul li#' + this.state.currentPage).addClass('active');
+        ("ul li.active").removeClass('active');
+        ('ul li#' + this.state.currentPage).addClass('active');
     }
     handleClick(event) {
         let listid = Number(event.target.id);
         this.setState({
             currentPage: listid
         });
-        $("ul li.active").removeClass('active');
-        $('ul li#' + listid).addClass('active');
+        ("ul li.active").removeClass('active');
+        ('ul li#' + listid).addClass('active');
         this.setPrevAndNextBtnClass(listid);
     }
     setPrevAndNextBtnClass(listid) {
