@@ -40,6 +40,8 @@ fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
 
     });
 
+    // console.log(Books);
+
 let Books = () => {
 
 
