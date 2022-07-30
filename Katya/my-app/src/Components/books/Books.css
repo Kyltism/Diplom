@@ -1,0 +1,8 @@
+#BookCards {
+    display: flex;
+    /* width: 1200px; */
+    width: 1280px;
+    /* margin: 50px auto; */
+    gap: 45px;
+    flex-wrap: wrap;
+}

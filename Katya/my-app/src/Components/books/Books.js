@@ -1,3 +1,5 @@
+import './Books.css';
+
 let bookCard = [];
 fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
     .then((Response) => {
@@ -7,7 +9,7 @@ fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
     .then((bookCard) => {
         bookCard.forEach(item => {
 
-            let container1 = document.getElementById('smt')
+            let container1 = document.getElementById('BookCards')
             const div1 = document.createElement('div');
             div1.className = 'containerCards'
 
@@ -20,7 +22,17 @@ fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
             const name = document.createElement('p');
             name.className = 'nameProduct';
             name.innerHTML = item.name;
-            div1.append(name)
+            div1.append(name);
+
+            const author = document.createElement('p');
+            author.className = 'author';
+            author.innerHTML = item.author;
+            div1.append(author);
+
+            const price = document.createElement('p');
+            price.className = 'price';
+            price.innerHTML = item.price;
+            div1.append(price);
 
             container1.append(div1);
 
@@ -34,9 +46,9 @@ let Books = () => {
 
 
     return (
-        <div>
-            <div id="smt"> </div>
-        </div>
+        
+            <div id="BookCards"> </div>
+        
     )
 }
 
