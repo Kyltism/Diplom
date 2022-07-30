@@ -1,13 +1,11 @@
-const Books = () => {
-
-    let bookCard = [];
-    fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
+let bookCard = [];
+fetch('https://62bd8868c5ad14c110c0fc2a.mockapi.io/Books')
     .then((Response) => {
         return Response.json()
     })
 
     .then((bookCard) => {
-        bookCard.forEach( item => {
+        bookCard.forEach(item => {
 
             let container1 = document.getElementById('smt')
             const div1 = document.createElement('div');
@@ -26,15 +24,20 @@ const Books = () => {
 
             container1.append(div1);
 
-    })
+        })
 
-    })
+    });
+
+let Books = () => {
 
 
 
-return (
-    <div id="smt"></div>
-)
+
+    return (
+        <div>
+            <div id="smt"> </div>
+        </div>
+    )
 }
 
 export default Books;
