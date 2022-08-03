@@ -26,7 +26,7 @@ fetch('https://api.itbook.store/1.0/search/mongodb')
             div1.append(name);
 
             const subtitle = document.createElement('p');
-            subtitle.className = 'author';
+            subtitle.className = 'subtitle';
             subtitle.innerHTML = item.subtitle;
             div1.append(subtitle);
 

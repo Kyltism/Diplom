@@ -1,8 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 #BookCards {
     display: flex;
-    /* width: 1200px; */
-    width: 1280px;
-    /* margin: 50px auto; */
     gap: 45px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerCards {
+    width: 352px;
+    height: 475px;
+    background-color: beige;
+    padding: 10px;
+}
+
+.cardImg {
+    width: 226px;
+    height: 264px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nameProduct, .price {
+    color: #313037;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.subtitle {
+    color: #A8A8A8;
+    font-family: 'Helios';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 30px auto 25px auto;
 }

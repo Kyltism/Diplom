@@ -1,0 +1,28 @@
+.bookStore {
+    font-size: 80px;
+    color: #fff;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: all 3s;
+    opacity: 1;
+    background-color: #313037;
+}
+
+.preloader-remove {
+    opacity: 0;
+    z-index: -10;
+}
