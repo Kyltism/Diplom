@@ -12,33 +12,30 @@ import {
 } from 'react-router-dom';
 // import TodoApp from './Components/Pagination/Pagination';
 
+import BookPage from './Components/bookPage/BookPage';
+
 
 
 function App() {
   return (
     <>
-    <Preloader></Preloader>
-      <div className="wrapper">
-        <Header />
-        
-        <Books />
-        {/* <TodoApp></TodoApp> */}
-        <Subscribe />
-        
-        <Footer />
-        
-      </div>
-
-      <BrowserRouter>
+      <Preloader></Preloader>
+    
+          <div className="wrapper">
+            <Header />
+            <Books />
+            {/* <TodoApp></TodoApp> */}
+            <Subscribe />
+            <Footer />
+          </div>
+  <BrowserRouter>
         <Routes>
-          <Route path='/'>
-
-            
+          <Route path='9781484206485' element = {<BookPage/>}>
+          
           </Route>
         </Routes>
-
       </BrowserRouter>
-      
+
     </>
   );
 }

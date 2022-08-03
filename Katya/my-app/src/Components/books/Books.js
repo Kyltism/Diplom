@@ -20,9 +20,10 @@ fetch('https://api.itbook.store/1.0/search/mongodb')
             img.src = item.image;
             div1.append(img);
 
-            const name = document.createElement('p');
+            const name = document.createElement('a');
             name.className = 'nameProduct';
             name.innerHTML = item.title;
+            name.href = item.isbn13;
             div1.append(name);
 
             const subtitle = document.createElement('p');
