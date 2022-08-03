@@ -19,6 +19,7 @@ import BookPage from './Components/bookPage/BookPage';
 function App() {
   return (
     <>
+     <BrowserRouter>
       <Preloader></Preloader>
     
           <div className="wrapper">
@@ -28,13 +29,12 @@ function App() {
             <Subscribe />
             <Footer />
           </div>
-  <BrowserRouter>
+ 
         <Routes>
-          <Route path='9781484206485' element = {<BookPage/>}>
-          
-          </Route>
+         
+          <Route path='/9781484206485' element = {<BookPage/>}/>       
         </Routes>
-      </BrowserRouter>
+</BrowserRouter>
 
     </>
   );

@@ -1,34 +1,30 @@
+import { Route } from 'react-router-dom';
 import './BookPage.css'
 
-// fetch('https://api.itbook.store/1.0/books/9781484206485')
-//     .then((Response) => {
-//         return Response.json()
-//     }) 
+fetch('https://api.itbook.store/1.0/books/9781484206485')
+    .then((Response) => {
+        return Response.json()
+    })
 
-//     .then((BookPage) => {
-//         console.log(BookPage)
-//         Object.keys(BookPage).forEach(page => {
-//             let content = document.getElementById('content');
-
-//             const img = document.createElement('img');
-//             img.className = 'cover';
-//             img.innerHTML = page.img;
-//             content.append(img);
-
-//             const divAbout = document.createElement('div');
-//             divAbout.className = 'aboutBook';
-//             content.append(divAbout);
-
-
-//         });
-//     });
+    .then((BookPage) => {
+        const content = document.getElementById('content');
+        const img = document.createElement('img');
+        img.src = BookPage.image;
+        content.append(img)
 
 
 
-    let BookPage = () => {
-        return (
-            <div id='content'></div>
-        )
-    }
+    });
 
-    export default BookPage;
+
+
+
+let BookPage = () => {
+    return (
+        // <Route path='9781484206485'>
+        <div id='content'>ugyuhygyguyg</div>
+        // </Route>
+    )
+}
+
+export default BookPage;
