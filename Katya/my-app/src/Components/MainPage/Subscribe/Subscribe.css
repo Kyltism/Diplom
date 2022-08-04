@@ -1,0 +1,24 @@
+.subscribe {
+    background: #F4EEFD;
+}
+
+fieldset {
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.inputs {
+    display: flex;
+}
+
+.inputMail, .inputSubmit {
+    padding: 10px;
+    /* border-radius: 5px; */
+}
+
+.inputSubmit {
+    background: #414c4b;
+    color: #F4EEFD;
+    cursor: pointer;
+}

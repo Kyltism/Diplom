@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './Books.css'
 
 interface IBooks {
     image: string;
@@ -16,7 +17,7 @@ interface IData {
     books: IBooks[];
 }
 
-const Aaaa = () => {
+const BookCards = () => {
     const [item, setUsers] = useState<IData>();
     const fetchData = () => {
         fetch("https://api.itbook.store/1.0/search/mongodb")
@@ -26,7 +27,7 @@ const Aaaa = () => {
     useEffect(() => {
         fetchData();
     }, []);
-    console.log(item);
+
     return (
         <div>
             {item?.books.length && (
@@ -40,4 +41,4 @@ const Aaaa = () => {
     );
 };
 
-export default Aaaa;
+export default BookCards;

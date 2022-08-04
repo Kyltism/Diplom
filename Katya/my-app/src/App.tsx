@@ -1,10 +1,6 @@
 
 import './App.css';
-import Preloader from './Components/Preloader/Preloader';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Subscribe from './Components/Subscribe';
-import Books from './Components/books/Books';
+
 import {
   BrowserRouter,
   Routes,
@@ -12,32 +8,18 @@ import {
 } from 'react-router-dom';
 // import TodoApp from './Components/Pagination/Pagination';
 
-import BookPage from './Components/bookPage/BookPage';
-import Aaaa from './Components/books/ghghgh';
+import Home from './Components/MainPage/Home';
 
 
 
 function App() {
   return (
     <>
-
-      <Aaaa></Aaaa>
       <BrowserRouter>
-        <Preloader></Preloader>
-
-        <div className="wrapper">
-          <Header />
-          <Books />
-          {/* <TodoApp></TodoApp> */}
-          <Subscribe />
-          <Footer />
-
-        </div>
-
         <Routes>
 
+          <Route path='/' element={<Home />} />
 
-          <Route path='/9781484206485' element={<BookPage />} />
         </Routes>
       </BrowserRouter>
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@500;600&display=swap');
 
 * {
   margin: 0;
@@ -107,10 +107,10 @@ fieldset{
 
 .inputMail , .inputSubmit{
 padding: 10px;
-/* border-radius: 5px; */
-}
+border-radius: 5px;
+} */
 
-.inputSubmit{
+/* .inputSubmit{
   background: #414c4b;
   color: #F4EEFD;
   cursor: pointer;
@@ -120,4 +120,4 @@ padding: 10px;
   justify-content: space-between;
   margin-top: 100px;
   display: flex;
-}
+} */
