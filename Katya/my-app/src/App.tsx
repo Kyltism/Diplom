@@ -13,28 +13,33 @@ import {
 // import TodoApp from './Components/Pagination/Pagination';
 
 import BookPage from './Components/bookPage/BookPage';
+import Aaaa from './Components/books/ghghgh';
 
 
 
 function App() {
   return (
     <>
-     <BrowserRouter>
-      <Preloader></Preloader>
-    
-          <div className="wrapper">
-            <Header />
-            <Books />
-            {/* <TodoApp></TodoApp> */}
-            <Subscribe />
-            <Footer />
-          </div>
- 
+
+      <Aaaa></Aaaa>
+      <BrowserRouter>
+        <Preloader></Preloader>
+
+        <div className="wrapper">
+          <Header />
+          <Books />
+          {/* <TodoApp></TodoApp> */}
+          <Subscribe />
+          <Footer />
+
+        </div>
+
         <Routes>
-         
-          <Route path='/9781484206485' element = {<BookPage/>}/>       
+
+
+          <Route path='/9781484206485' element={<BookPage />} />
         </Routes>
-</BrowserRouter>
+      </BrowserRouter>
 
     </>
   );
