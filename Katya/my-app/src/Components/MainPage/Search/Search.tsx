@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import './Search.css'
 
 const Search = () => {
@@ -10,5 +9,3 @@ const Search = () => {
 }
 
 export default Search;
-
-{/* <button className='search1'type="button"><img className="searchImage" src="icon-search.png"></img></button> */ }

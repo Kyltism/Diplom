@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import './Books.css'
+import { Link } from 'react-router-dom';
+import './Books.css';
 
 interface IBooks {
     image: string;
@@ -29,15 +30,25 @@ const BookCards = () => {
     }, []);
 
     return (
-        <div>
-            {item?.books.length && (
-                <div>
-                    {item.books.map((i: IBooks) => (
-                        <img src={i.image} alt={i.image} />
-                    ))}
-                </div>
-            )}
-        </div>
+        <>
+            <div>
+                {item?.books.length && (
+                    <div id="BookCards">
+                        {item.books.map((i: IBooks) => (
+                            <div key={i.isbn13} className='containerCards'>
+                                <Link to={i.isbn13}>
+                                    <img src={i.image} alt={i.image} key={i.image} className='cardImg' />
+                                    <p key={i.title} className='nameProduct'>{i.title}</p>
+                                    <p key={i.subtitle} className='subtitle'>{i.subtitle}</p>
+                                    <p key={i.price} className='price'>{i.price}</p>
+                                </Link>
+                            </div>
+                        ))}
+
+                    </div>
+                )}
+            </div>
+        </>
     );
 };
 
