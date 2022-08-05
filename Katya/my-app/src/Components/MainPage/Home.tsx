@@ -9,7 +9,7 @@ import Subscribe from './Subscribe/Subscribe';
 
 // import BookPage from './BookPage/BookPage';
 import BookCards from './Books/BookCards';
-
+// import BookPage from '../BookPage/BookPage';
 
 function Home() {
     return (
@@ -22,6 +22,7 @@ function Home() {
                 {/* <TodoApp></TodoApp> */}
                 <Subscribe />
                 <Footer />
+                {/* <BookPage/> */}
             </div>
         </>
     );
