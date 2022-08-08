@@ -4,7 +4,8 @@ import './Preloader.css';
 
 const Preloader = () => {
 const loader = useRef<HTMLDivElement>(null);
-    window.onload = function () {
+window.setTimeout(function () {
+    
 
         if (loader.current){
             if(loader.current.classList.contains('preloader')){
@@ -12,7 +13,8 @@ const loader = useRef<HTMLDivElement>(null);
             }
         }
         
-    };
+    }, 300);
+
     return (
         <div className="preloader" ref={loader}>
             <p className='bookStore'>BOOKSTORE</p>
