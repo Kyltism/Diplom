@@ -34,9 +34,12 @@ const BookPage = () => {
   return(
     <div>
         {data.map(item => (
-            <div>
-            <img src={item.image} alt="" />
-            <p></p>
+            <div key={item.isbn13}>
+            <img src={item.image} alt="" key={item.image} />
+            <p key={item.title}>{item.title}</p>
+            <p>{item.subtitle}</p>
+            <p>{item.price}</p>
+            <div>{item.desc}</div>
             </div>
         ))}
     </div>
