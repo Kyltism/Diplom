@@ -1,0 +1,12 @@
+.forms{
+    width: 20%;
+}
+
+.formPassword{
+    display: flex;
+    flex-direction: column;
+}
+.email{
+    display: flex;
+    flex-direction: column; 
+}

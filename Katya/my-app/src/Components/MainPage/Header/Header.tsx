@@ -9,7 +9,9 @@ export default function Header() {
                 <span className='logo'>BOOKSTORE</span>
                 <Search />
                 <ul className='nav'>
-                    <li><img className="header-image" src="user.png" alt='' /></li>
+                    <Link to='/registration'>
+                        <li><img className="header-image" src="user.png" alt='' /></li>
+                    </Link>
                     <Link to='/shoppingCart'>
                         <li><img className="header-image" src="shopping-bag.png" alt='' /></li>
                     </Link>
