@@ -17,6 +17,7 @@ function Home() {
             <Preloader></Preloader>
             <div className="wrapper">
                 <Header />
+                <div className='presentation'></div>
                 {/* <Books /> */}
                 <BookCards />
                 {/* <TodoApp></TodoApp> */}

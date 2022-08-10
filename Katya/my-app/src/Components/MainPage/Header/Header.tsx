@@ -15,7 +15,7 @@ export default function Header() {
                 </ul>
             </div>
             <hr></hr>
-            <div className='presentation'></div>
+            
         </header>
     )
 }

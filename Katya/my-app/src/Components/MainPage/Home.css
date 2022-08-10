@@ -16,3 +16,38 @@ body {
     width: 1280px;
     margin: 50px auto;
 }
+
+
+.presentation {
+    margin: 100px 0;
+    background: url(../../../public/bookswhite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.presentation::after {
+    content: 'Лучшие книги для Вас';
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 309px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #009688;
+    ;
+}
+
+.presentation::before {
+    content: 'по низким ценам';
+    position: absolute;
+    top: 115px;
+    left: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #009688;
+    ;
+}

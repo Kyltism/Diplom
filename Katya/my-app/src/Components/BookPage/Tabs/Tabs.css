@@ -1,0 +1,18 @@
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
+.tab{
+    height: 40px;
+    font-weight: bold;
+}
+.tab:hover {
+    cursor: pointer;
+    color: blue;
+    border-bottom: 4px solid black;
+
+}
+
+.wrapperTabs{
+    padding-top: 20px;
+}
