@@ -6,3 +6,25 @@
     line-height: 64px;
     color: #313037;
 }
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+.preview {
+    margin-top: 85px;
+}
+
+.inform {
+    display: flex;
+}
+
+.price_rating, .about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_rating, .about {
+    gap: 20px;
+}
