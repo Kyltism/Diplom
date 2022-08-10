@@ -22,11 +22,8 @@
 
 // }
 
-export const getBook = async () => {
-    
-    
-    
-    const response = await fetch(`https://api.itbook.store/1.0/search/9781617291609`);
+export const getBook = async (path?: string) => {
+    const response = await fetch(`https://api.itbook.store/1.0/books/${path}`);
     const data = await response.json();
     return data;
 
