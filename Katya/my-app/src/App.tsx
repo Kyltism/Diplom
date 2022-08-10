@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from './Components/MainPage/Home';
 import BookPage from './Components/BookPage/BookPage';
+import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/:isbn13' element={<BookPage />}></Route>
+          <Route path='/shoppingCart' element={<ShoppingCart/>}></Route>
         </Routes>
       </BrowserRouter >
 
