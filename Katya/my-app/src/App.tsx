@@ -19,7 +19,7 @@ function App() {
           <Route path='/:isbn13' element={<BookPage />}></Route>
           <Route path='/shoppingCart' element={<ShoppingCart/>}></Route>
           <Route path='/registration' element={<Registration/>}></Route>
-          <Route path='/BookStore' element={<Home/>}></Route>
+        
           
         </Routes>
       </BrowserRouter >

@@ -6,7 +6,7 @@ const Arrow = () => {
         <form>
 
             <button className="arrow">
-                <Link to='/BookStore'>
+                <Link to='/'>
                     <img src="Icon-Arrow-Left.png"></img>
                 </Link>
             </button>
