@@ -1,12 +1,42 @@
-.forms{
+.forms {
     width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
 }
 
-.formPassword{
+.Buttns{
+    border-radius: 10px;
+    margin: 100px;
+    background: #f7f4f4;
+    padding: 19px;
+}
+
+.formLogin {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
-.email{
+
+.formPassword {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btnSignIn{
+    width: 22%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #2d2b2b;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
 }

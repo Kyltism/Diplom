@@ -9,18 +9,21 @@ export default function Registration() {
         <div className='wrapper'>
             <Header />
             <div className='Registration'>
-                <div>
+                <div className='Buttns'>
                     <Tabs />
                     <div className='formLogin'>
-                    <form className='email'>
-                        <label>Email </label>
-                        <input className='forms' type="text" placeholder="Your email" />
-                    </form>
-                    <form className='formPassword'>
-                        <label>Password </label>
-                        <input className='forms' type="text" placeholder="Your password" />
-                        <span className='login-form__pass-lost'>Forgot password?</span>
-                    </form>
+                        <form className='email'>
+                            <label>Email </label>
+                            <input className='forms' type="text" placeholder="Your email" />
+                        </form>
+                        <form className='formPassword'>
+                            <label>Password </label>
+                            <input className='forms' type="text" placeholder="Your password" />
+                            <span className='login-form__pass-lost'>Forgot password?</span>
+                        </form>
+                        <form>
+                            <button className='btnSignIn'>SIGN IN</button>
+                        </form>
                     </div>
                 </div>
             </div>

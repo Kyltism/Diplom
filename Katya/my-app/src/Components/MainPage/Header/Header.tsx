@@ -6,7 +6,9 @@ export default function Header() {
     return (
         <header>
             <div className='nav'>
-                <span className='logo'>BOOKSTORE</span>
+                <Link to='/BookStore'>
+                    <span className='logo'>BOOKSTORE</span>
+                </Link>
                 <Search />
                 <ul className='nav'>
                     <Link to='/registration'>
