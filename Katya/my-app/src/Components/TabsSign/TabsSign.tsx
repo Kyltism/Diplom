@@ -1,8 +1,8 @@
-import "./Tabs.css";
+import "./TabsSign.css";
 
 
 
-const Tabs = () => {
+const TabsSign = () => {
     return (
         <div className="wrapperTabs">
             <div className="tabs">
@@ -16,4 +16,4 @@ const Tabs = () => {
 }
 
 
-export default Tabs;
+export default TabsSign;

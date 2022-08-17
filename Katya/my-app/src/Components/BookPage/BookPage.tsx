@@ -5,6 +5,11 @@ import Header from "../MainPage/Header/Header";
 import Footer from "../MainPage/Footer/Footer";
 import './BookPage.css'
 import Rating from './Rating/Rating';
+import AddToCart from "./AddToCart/AddToCart";
+import Arrow from "../BtnArrow/BtnArrow";
+
+
+
 
 
 
@@ -37,10 +42,35 @@ const BookPage = () => {
     )();
   }, []);
 
+
+  const onAdd = () => {
+    const cart = localStorage.getItem("cart");
+
+    if (cart) {
+      let newCart = JSON.parse(cart);
+      const index = newCart.findIndex((book: any) => book.isbn13 == data?.isbn13);
+      if (index == -1) {
+        newCart.push({ isbn13, amount: 1 });
+
+      } else {
+        newCart.splice(index, 1, { isbn13, amount: newCart[index].amount + 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(newCart));
+
+
+
+    } else {
+      data && localStorage.setItem("cart", JSON.stringify([{ isbn13, amount: 1 }]));
+    }
+
+  }
+
+
   return (
     <div>
       <div key={data?.isbn13} className='wrapper'>
         <Header />
+        <Arrow />
 
         <p key={data?.title} className='titleBook'>{data?.title}</p>
         <div className="inform">
@@ -62,12 +92,14 @@ const BookPage = () => {
             <div className="about">
               <p>Pages</p><span>{data?.pages}</span>
             </div>
+            <AddToCart handleAddToCart={onAdd} />
           </div>
         </div>
         <p>{data?.subtitle}</p>
         <div>{data?.desc}</div>
         <button id=""></button>
       </div>
+
       <Footer />
     </div>
 

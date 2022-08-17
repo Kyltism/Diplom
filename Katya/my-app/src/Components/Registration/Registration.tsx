@@ -1,7 +1,7 @@
 import './Registration.css';
 import Header from '../MainPage/Header/Header';
 import Footer from '../MainPage/Footer/Footer';
-import Tabs from '../Tabs/Tabs';
+import Tabs from '../TabsSign/TabsSign';
 
 
 export default function Registration() {
