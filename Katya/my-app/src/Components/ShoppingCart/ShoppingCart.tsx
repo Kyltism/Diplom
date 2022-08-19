@@ -31,16 +31,15 @@ export default function ShoppingCart() {
     const cart = localStorage.getItem("cart");
     if (cart) {
       const newCart = JSON.parse(cart);
-      newCart.forEach((book:any) => {
-        (
-          async () => {
-            const data = await getBook(book.isbn13);
-            setBooksInfo((prevState) => ([{amount: book.amount, ...data}, ...prevState]));
-          }
-        )();
-      });
+      const books: BookExp[] = [];
+      (async () => {
+        for (const book of newCart) {
+          const data = await getBook(book.isbn13);
+          books.push({ amount: book.amount, ...data });
+        }
+        await setBooksInfo(books);
+      })();
     }
-
   }, []);
 
   useEffect(() => {
@@ -54,12 +53,12 @@ export default function ShoppingCart() {
         <div>
           <Arrow />
           <p>Your cart</p>
-          {booksInfo.length ? booksInfo.map((book: any)=> (
+          {booksInfo.length ? booksInfo.map((book: any) => (
             <BookCard
               {...book}
             />
           )) : (<p>Empty cart</p>)}
-          
+
         </div>
         <Footer />
       </div>

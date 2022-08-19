@@ -74,23 +74,23 @@ const BookPage = () => {
 
         <p key={data?.title} className='titleBook'>{data?.title}</p>
         <div className="inform">
-          <img src={data?.image} alt="" key={data?.image} />
+          <img src={data?.image} alt="" key={data?.image} className='img_Card' />
           <div className="preview">
             <div className="price_rating">
-              <p>{data?.price}</p>
+              <p className="pricing">{data?.price}</p>
               <span className="rating">{data && <Rating rating={+(data.rating)} />}</span>
             </div>
             <div className="about">
-              <p>Authors</p><span>{data?.authors}</span>
+              <p className="characteristic">Authors</p><span className="interprit">{data?.authors}</span>
             </div>
             <div className="about">
-              <p>Publisher</p><span>{data?.publisher}</span>
+              <p className="characteristic">Publisher</p><span className="interprit">{data?.publisher}</span>
             </div>
             <div className="about">
-              <p>Year</p><span>{data?.year}</span>
+              <p className="characteristic">Year</p><span className="interprit">{data?.year}</span>
             </div>
             <div className="about">
-              <p>Pages</p><span>{data?.pages}</span>
+              <p className="characteristic">Pages</p><span className="interprit">{data?.pages}</span>
             </div>
             <AddToCart handleAddToCart={onAdd} />
           </div>

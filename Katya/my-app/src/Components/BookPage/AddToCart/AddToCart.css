@@ -1,10 +1,14 @@
 .AddToCart{
+    width: 448px;
+    height: 56px;
     padding: 10px;
     border-radius: 5px;
-    background: #2d2b2b;
+    background-color: #313037;
     color: white;
-    font-weight: bold;
-    font-size: 16px;
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
     cursor: pointer;
-    margin-top: 90px;
+    margin-top: 88px;
 }
