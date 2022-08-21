@@ -77,10 +77,10 @@ const Tabs = () => {
             <div ref={tabDesc} className="desc open">
                 <p> {data?.desc}</p>
             </div>
-            <div ref={tabAuth} className="auth open">
+            <div ref={tabAuth} className="auth">
                 <p >{data?.authors}</p>
             </div>
-            <div ref={tabReviews} className="revie open">
+            <div ref={tabReviews} className="revie">
                 <p >{data?.publisher}</p>
             </div>
             <hr />
