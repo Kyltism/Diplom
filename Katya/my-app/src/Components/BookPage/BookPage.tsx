@@ -7,6 +7,7 @@ import './BookPage.css'
 import Rating from './Rating/Rating';
 import AddToCart from "./AddToCart/AddToCart";
 import Arrow from "../BtnArrow/BtnArrow";
+import Tabs from '../BookPage/Tabs/Tabs'
 
 
 
@@ -95,9 +96,11 @@ const BookPage = () => {
             <AddToCart handleAddToCart={onAdd} />
           </div>
         </div>
-        <p>{data?.subtitle}</p>
-        <div>{data?.desc}</div>
+        <Tabs />
+        
+        <div></div>
         <button id=""></button>
+
       </div>
 
       <Footer />
