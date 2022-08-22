@@ -37,6 +37,8 @@ const Tabs = () => {
 
             } else {
                 tabDesc.current.classList.add('open');
+                tabReviews.current.classList.remove('open');
+                tabAuth.current.classList.remove('open');
             }
         }
     }
@@ -49,6 +51,9 @@ const Tabs = () => {
 
             } else {
                 tabAuth.current.classList.add('open');
+                tabReviews.current.classList.remove('open');
+                tabDesc.current.classList.remove('open');
+
             }
         }
     }
@@ -61,6 +66,8 @@ const Tabs = () => {
 
             } else {
                 tabReviews.current.classList.add('open');
+                tabAuth.current.classList.remove('open');
+                tabDesc.current.classList.remove('open');
             }
         }
     }
