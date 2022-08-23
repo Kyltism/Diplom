@@ -33,6 +33,7 @@ const BookCard = ({ title, authors, amount, price, image }: IBookCard) => {
                 <p className="authors">{authors}</p>
             </div>
             <p className="price">{price}</p>
+            <button className="deleteBut">✖</button>
         </div>
 
     )
