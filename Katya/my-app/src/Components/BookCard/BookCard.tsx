@@ -13,22 +13,26 @@ interface IBookCard {
 
 
 const BookCard = ({ title, authors, amount, price, image, isbn13 }: IBookCard) => {
-    
+
     const Cancle = useRef<HTMLDivElement>(null);
+
+
     const onClickCancle = () => {
 
         const cart = localStorage.getItem("cart");
-       
+        const aaa = document.getElementsByClassName('oneCard')
         if (cart && Cancle.current) {
             let deleteCart = JSON.parse(cart);
             const index = deleteCart.findIndex((book: any) => book.amount == amount);
             if (deleteCart.length == 1 && Cancle.current.classList.contains('oneCard')) {
                 localStorage.removeItem('cart');
-                Cancle.current.classList.remove('oneCard')
+                Cancle.current.remove()
 
             } else {
                 deleteCart.splice(index, 1);
                 localStorage.setItem("cart", JSON.stringify(deleteCart));
+                Cancle.current.remove()
+
 
             }
 
