@@ -1,15 +1,5 @@
-
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Header from "../MainPage/Header/Header";
-import Footer from "../MainPage/Footer/Footer";
+import { useRef } from "react";
 import './BookCard.css'
-
-import Arrow from "../BtnArrow/BtnArrow";
-
-
-
-
 
 
 interface IBookCard {
@@ -18,27 +8,49 @@ interface IBookCard {
     amount: number;
     price: string;
     image: string;
-
+    isbn13: string;
 }
 
 
-const BookCard = ({ title, authors, amount, price, image }: IBookCard) => {
+const BookCard = ({ title, authors, amount, price, image, isbn13 }: IBookCard) => {
+    
+    const Cancle = useRef<HTMLDivElement>(null);
+    const onClickCancle = () => {
 
+        const cart = localStorage.getItem("cart");
+       
+        if (cart && Cancle.current) {
+            let deleteCart = JSON.parse(cart);
+            const index = deleteCart.findIndex((book: any) => book.amount == amount);
+            if (deleteCart.length == 1 && Cancle.current.classList.contains('oneCard')) {
+                localStorage.removeItem('cart');
+                Cancle.current.classList.remove('oneCard')
+
+            } else {
+                deleteCart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(deleteCart));
+
+            }
+
+        }
+
+    }
 
     return (
-        <div className="oneCard">
-            <img src={image} alt="" className="imgCard"/>
+        <div className="oneCard" ref={Cancle}>
+            <img src={image} alt="" className="imgCard" />
             <div className="desc">
                 <p className="title">{title}</p>
                 <p className="authors">{authors}</p>
             </div>
             <p className="price">{price}</p>
-            <button className="deleteBut">✖</button>
+            <button className="deleteBut" onClick={onClickCancle}>✖</button>
         </div>
 
     )
 
 }
+
 
 export default BookCard;
 
