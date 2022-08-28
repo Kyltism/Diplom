@@ -5,11 +5,10 @@ import Footer from './Footer/Footer';
 import Subscribe from './Subscribe/Subscribe';
 
 
-// import TodoApp from './Components/Pagination/Pagination';
-
 // import BookPage from './BookPage/BookPage';
 import BookCards from './Books/BookCards';
 // import BookPage from '../BookPage/BookPage';
+import Pagination from '../pagination/pagination';
 
 function Home() {
     return (
@@ -20,8 +19,11 @@ function Home() {
                 <div className='presentation'></div>
                 {/* <Books /> */}
                 <BookCards />
-                {/* <TodoApp></TodoApp> */}
+                
+                
+                <Pagination/>
                 <Subscribe />
+              
                 <Footer />
                 {/* <BookPage/> */}
             </div>
