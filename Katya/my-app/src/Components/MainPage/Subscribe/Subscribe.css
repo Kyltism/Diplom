@@ -1,5 +1,7 @@
 .subscribe {
     background: #F4EEFD;
+    width: 90%;
+    margin-left: 5%;
 }
 
 fieldset {

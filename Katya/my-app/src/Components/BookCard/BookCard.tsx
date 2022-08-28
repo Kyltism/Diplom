@@ -1,18 +1,16 @@
 import { useRef } from "react";
 import './BookCard.css'
 
-
 interface IBookCard {
     title: string;
     authors: string;
     amount: number;
     price: string;
     image: string;
-    isbn13: string;
 }
 
 
-const BookCard = ({ title, authors, amount, price, image, isbn13 }: IBookCard) => {
+const BookCard = ({ title, authors, amount, price, image }: IBookCard) => {
 
     const Cancle = useRef<HTMLDivElement>(null);
 
@@ -20,7 +18,6 @@ const BookCard = ({ title, authors, amount, price, image, isbn13 }: IBookCard) =
     const onClickCancle = () => {
 
         const cart = localStorage.getItem("cart");
-        const aaa = document.getElementsByClassName('oneCard')
         if (cart && Cancle.current) {
             let deleteCart = JSON.parse(cart);
             const index = deleteCart.findIndex((book: any) => book.amount == amount);
@@ -49,6 +46,7 @@ const BookCard = ({ title, authors, amount, price, image, isbn13 }: IBookCard) =
             </div>
             <p className="price">{price}</p>
             <button className="deleteBut" onClick={onClickCancle}>✖</button>
+
         </div>
 
     )

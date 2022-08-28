@@ -35,7 +35,7 @@ const BookCards = () => {
    
     return (
         <>
-            <div>
+            <div className="BookPageCards">
                 {item?.books.length && (
                     <div id="BookCards">
                         {item.books.map((i: IBooks) => (

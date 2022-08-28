@@ -1,0 +1,108 @@
+.header__container {
+    display: none;
+}
+
+
+@media (max-width: 728px) {
+
+
+    .header__nav {
+        display: block;
+        left: -500%;
+        position: absolute;
+        background: #222C36;
+        transition: all 0.4s ease;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100%;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .header__container {
+        margin: auto;
+        display: block;
+    }
+
+    .header__menu {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 40px;
+        margin-top: 55px;
+        padding: 27px;
+        margin-left: 100px;
+        margin-top: 55px;
+        padding: 27px;
+        margin-left: 100px;
+    }
+
+    .menu__item {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .header__nav.open-menu {
+        left: 0;
+        margin-left: 883px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .menu-burger__header {
+        position: relative;
+        width: 60px;
+        height: 45px;
+        display: block;
+        margin-left: 10px;
+        z-index: 5;
+    }
+
+    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before {
+        height: 6px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+
+    }
+
+    .menu-burger__header span {
+        top: 24px;
+    }
+
+    .menu-burger__header:after, .menu-burger__header:before {
+        content: '';
+    }
+
+    .menu-burger__header:after {
+        bottom: -3px;
+    }
+
+    .menu-burger__header:before {
+        top: 5px;
+    }
+
+    .menu-burger__header.open-menu span {
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .menu-burger__header.open-menu:before {
+        transform: rotate(38deg);
+        top: 22px;
+        transition: 0.4s;
+    }
+
+    .menu-burger__header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+
+}

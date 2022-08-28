@@ -5,6 +5,8 @@ import Footer from '../MainPage/Footer/Footer';
 import Arrow from '../BtnArrow/BtnArrow';
 import { getBook } from '../BookPage/Fetch';
 import BookCard from '../BookCard/BookCard';
+import calcTotalPrice from '../BookPage/totalPrice/TotalPrice'
+// import { useParams } from "react-router-dom";
 
 interface BookExp {
   title: string;
@@ -22,17 +24,18 @@ interface BookExp {
   amount: number;
 }
 
-
 export default function ShoppingCart() {
 
   const [booksInfo, setBooksInfo] = useState<BookExp[]>([]);
 
   useEffect(() => {
     const cart = localStorage.getItem("cart");
+
     if (cart) {
       const newCart = JSON.parse(cart);
       const books: BookExp[] = [];
       (async () => {
+
         for (const book of newCart) {
           const data = await getBook(book.isbn13);
           books.push({ amount: book.amount, ...data });
@@ -41,10 +44,6 @@ export default function ShoppingCart() {
       })();
     }
   }, []);
-
-  useEffect(() => {
-    console.log(booksInfo);
-  }, [booksInfo]);  // потом удалить
 
   return (
     <div className='wrapper'>
@@ -56,8 +55,11 @@ export default function ShoppingCart() {
           {booksInfo.length ? booksInfo.map((book: any) => (
             <BookCard
               {...book}
-            />
+            >
+
+            </BookCard>
           )) : (<p>Empty cart</p>)}
+          <span>total:</span><span>{calcTotalPrice(booksInfo)}</span>
 
         </div>
         <Footer />

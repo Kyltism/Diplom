@@ -3,11 +3,7 @@ import Preloader from './Preloader/Preloader';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Subscribe from './Subscribe/Subscribe';
-
-
-// import BookPage from './BookPage/BookPage';
 import BookCards from './Books/BookCards';
-// import BookPage from '../BookPage/BookPage';
 import Pagination from '../pagination/pagination';
 
 function Home() {

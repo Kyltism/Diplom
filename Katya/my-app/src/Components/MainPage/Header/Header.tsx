@@ -1,6 +1,9 @@
 import './Header.css';
 import Search from '../Search/Search';
+import Burger from './burger/Burger';
 import { Link } from 'react-router-dom';
+
+
 
 export default function Header() {
     return (
@@ -17,8 +20,9 @@ export default function Header() {
                     <Link to='/shoppingCart'>
                         <li><img className="header-image" src="shopping-bag.png" alt='' /></li>
                     </Link>
-                    <li><img className="header-image" src="Vector.png" alt='' /></li>
+                    {/* <li><img className="header-image" src="Vector.png" alt='' /></li> */}
                 </ul>
+                <Burger />
             </div>
             <hr></hr>
 
