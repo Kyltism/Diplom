@@ -3,3 +3,7 @@
     margin-top: 100px;
     display: flex;
   }
+  .wrapper{
+    width: 1280px;
+    margin: 50px auto;
+  }

@@ -90,7 +90,6 @@ const Tabs = () => {
             <div ref={tabReviews} className="revie">
                 <p >{data?.publisher}</p>
             </div>
-            <hr />
         </div>
 
     );
