@@ -17,7 +17,11 @@
     padding-top: 20px;
 }
 
-.desc{
+.desc.open, .auth.open, .revie.open{
     display: block;
     
+}
+
+.auth, .revie, .desc{
+    display: none;
 }
