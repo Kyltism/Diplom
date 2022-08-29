@@ -51,7 +51,7 @@ export default function ShoppingCart() {
         <Header />
         <div>
           <Arrow />
-          <p>Your cart</p>
+          <p className='yourCart'>Your cart</p>
           {booksInfo.length ? booksInfo.map((book: any) => (
             <BookCard
               {...book}
