@@ -1,6 +1,5 @@
 .nav {
     display: flex;
-    justify-content: space-between;
 }
 
 .nav a {
@@ -9,7 +8,7 @@
 }
 
 .SearchFunction {
-    margin-right: 10%;
+    margin-left: 15%;
 }
 
 
@@ -22,7 +21,7 @@ header .logo {
 
 header ul.nav {
     align-items: center;
-    margin-right: 3%;
+    margin-left: 38%;
 }
 
 header ul.nav li {
@@ -76,16 +75,16 @@ hr {
 }
 
 
-@media (max-width: 728px) {
+@media (max-width: 768px) {
     header ul.nav {
         display: none;
     }
 
-    .SearchFunction {
+    /* .SearchFunction {
         margin-right: 54%;
-    }
+    } */
 
-    .search {
+    /* .search {
         margin-left: 140%;
-    }
+    }  */
 }

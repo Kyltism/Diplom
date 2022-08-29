@@ -59,7 +59,8 @@ export default function ShoppingCart() {
 
             </BookCard>
           )) : (<p>Empty cart</p>)}
-          <span>total:</span><span>{calcTotalPrice(booksInfo)}</span>
+
+<span>total:</span><span>{calcTotalPrice(booksInfo)}</span>
 
         </div>
         <Footer />
