@@ -59,9 +59,12 @@ export default function ShoppingCart() {
 
             </BookCard>
           )) : (<p>Empty cart</p>)}
-
-<span>total:</span><span>{calcTotalPrice(booksInfo)}</span>
-
+          <div className='blockTotal'>
+            <div className='totalPrice'>
+              <span className='total'>TOTAL:</span><span className='priceT'>{calcTotalPrice(booksInfo)}</span>
+            </div>
+            <button className="checkOut"> CHECK OUT</button>
+          </div>
         </div>
         <Footer />
       </div>

@@ -8,3 +8,34 @@
     font-weight: bold;
     padding-bottom: 20px;
 }
+
+.totalPrice {
+    width: 150px;
+    background: #F4EEFD;
+    padding: 20px;
+    
+}
+
+.total {
+    font-weight: bold;
+    padding-right: 15px;
+    font-size: 20px;
+   
+}
+.priceT{
+    font-weight: bold; 
+}
+.checkOut{
+    width: 190px;
+    background: #171717;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+.blockTotal{
+    margin-left: 65%;
+    margin-top: 5%;
+}
